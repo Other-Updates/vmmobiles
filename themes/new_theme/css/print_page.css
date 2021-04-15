@@ -1,0 +1,206 @@
+
+@media print 
+{
+    .no-display
+	{
+	display:none;
+	}
+
+	.well
+	{
+		display:none;	
+	}		
+	.print_table
+	{
+		font-size:9px !important;
+		border: 1px solid #666666 !important ;
+		
+	}
+	
+	.table-bordered.print_border th, .table-bordered.print_border td { border-left:1px solid #666666 !important; }
+    .table.print_border th, .table.print_border td{border-top:1px solid #666666 !important;}
+	.table-bordered.print_border{border:none !important; border-bottom:1px solid #666666 !important;border-right:1px solid #666666 !important;}
+	.print_table1
+	{
+		font-size:6px !important;
+		border: 1px solid #666666 !important ;
+		
+	}
+	.print_table1 th, .print_table1 td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+	.print_table2
+	{
+	
+	  
+		font-size:8px !important;
+		border: 1px solid #666666 !important ;
+	  
+		
+	}
+	.print_table2 th, .print_table2 td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+   .salary_table
+   {
+   border: 1px solid #666666 !important ;
+   }
+   .salary_table th, .salary_table td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+   .incentive_table
+   {
+    border: 1px solid #666666 !important ;
+   }
+   .incentive_table th, .incentive_table td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+   .time_table
+   {
+   border: 1px solid #666666 !important ;
+   }
+   .time_table th, .time_table td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+   .revision_table
+   {
+    border: 1px solid #666666 !important ;
+   }
+    .revision_table th, .revision_table td
+   {
+     border-left:1px solid #666666 !important;
+     border-top:1px solid #666666 !important;
+   }
+   
+   
+   
+   
+   
+	.widgettitle
+	{
+	display:block  !important;
+	text-align:center;
+	background:none;
+	color:#000000 !important;
+	font-weight:bold;
+	}
+	.span12
+	{
+		background:#FFFFFF !important;
+		
+	}
+	
+	#rotate
+	{
+		width:20px !important;
+		position:relative;
+		right: -3px;
+		top: -2px;
+	}
+	.during_class{
+		line-height:10px!important;
+	}
+	.table th, .table td{ padding:2px; color:#000000; line-height:15px !important;}
+	.rotate_class
+	{
+		width:10px!important;
+	}
+	@page{ size : landscape;}
+	.alert-success
+	{
+		display:none;
+	}
+	*{ background-color: #fff !important;}
+	#rotate_holiday{ width:10px !important;}
+	#rotate_padding1{padding: 40px 0px 10px 0px;}
+	.wage_res{ font-size:10px;}
+	.table th{ vertical-align:bottom;}
+	/*wage box*/
+	.print_div{width:100%; float:left !important;}
+	.wage_box{float:left !important; width:46% !important; padding:10px;line-height:13px;font-size:9px;}
+	.dotted_line 
+	{
+		border-bottom: 1px dashed #666666;
+		font-weight: bold;
+		padding: 2px 10px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.wage_date1{width:100px;!important; font-size:12px !important;}
+	.wage_date2{width:100px;!important;font-size:12px !important;}
+	.wage_date3{width:100px;!important;}
+	.center_align,.hide_row
+	{
+		display:none!important;
+	}
+	.tamil_font
+	{
+		font-size:7px;
+	}
+	.join_class
+	{
+		font-size:18px!important;
+	}
+	.line_space_class
+	{
+		line-height:8px !important;
+	}
+	.td_border 
+	{
+		border: 1px solid #494949;
+	}
+	.firm1
+	{
+		width:100px!important;
+	}
+	.firm2
+	{
+		width:200px!important;
+	}
+	.firm3
+	{
+		width:150px!important;
+	}
+	.firm4
+	{
+		width:100px!important;
+	}
+	.firm4
+	{
+		width:100px!important;
+	}
+	.pay_class1{width:10px!important;}
+	.pay_class2{width:400px!important;}
+	.pay_class3{width:10px!important;}
+	.pay_class4{width:100px!important;}
+	.pay_class5{width:200px!important;}
+	
+	.over_class1{width:10px!important;}
+	.over_class2{width:350px!important;}
+	.over_class3{width:10px!important;}
+	.over_class4{width:300px!important;}
+	.alert .alert-success{ display:none;}
+	
+	.wage_res
+	{
+	border:none !important;	
+	}
+	canvas{display:none;}
+	.wage_res th, .wage_res td{ border:none;}
+	.show_title,#session_msg{display:none!important;}
+	.hide_title{display:block;}
+	.hide_show{ display:none;}
+
+	
+}
+
+	

@@ -1,0 +1,579 @@
+div.dataTables_length label {
+	font-weight: normal;
+	float: left;
+	text-align: left;
+}
+
+div.dataTables_length select {
+	width: 75px;
+}
+
+div.dataTables_filter label {
+	font-weight: normal;
+	float: right;
+}
+
+div.dataTables_filter input {
+	width: 16em;
+}
+
+div.dataTables_info {
+	padding-top: 8px;
+}
+
+div.dataTables_paginate {
+	float: right;
+	margin: 0;
+}
+
+div.dataTables_paginate ul.pagination {
+	margin: 2px 0;
+	white-space: nowrap;
+}
+
+table.dataTable td,
+table.dataTable th {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+
+table.dataTable {
+	clear: both;
+	margin-top: 6px !important;
+	margin-bottom: 6px !important;
+	max-width: none !important;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+	cursor: pointer;
+}
+
+table.dataTable thead .sorting { background: url('../images/sort_both.png') no-repeat center right; }
+table.dataTable thead .sorting_asc { background: url('../images/sort_asc.png') no-repeat center right; }
+table.dataTable thead .sorting_desc { background: url('../images/sort_desc.png') no-repeat center right; }
+
+table.dataTable thead .sorting_asc_disabled { background: url('../images/sort_asc_disabled.png') no-repeat center right; }
+table.dataTable thead .sorting_desc_disabled { background: url('../images/sort_desc_disabled.png') no-repeat center right; }
+
+table.dataTable thead > tr > th {
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+table.dataTable th:active {
+	outline: none;
+}
+
+/* Scrolling */
+div.dataTables_scrollHead table {
+	margin-bottom: 0 !important;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+div.dataTables_scrollHead table thead tr:last-child th:first-child,
+div.dataTables_scrollHead table thead tr:last-child td:first-child {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+div.dataTables_scrollBody table {
+	border-top: none;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollBody tbody tr:first-child th,
+div.dataTables_scrollBody tbody tr:first-child td {
+	border-top: none;
+}
+
+div.dataTables_scrollFoot table {
+	margin-top: 0 !important;
+	border-top: none;
+}
+
+/* Frustratingly the border-collapse:collapse used by Bootstrap makes the column
+   width calculations when using scrolling impossible to align columns. We have
+   to use separate
+ */
+table.table-bordered.dataTable {
+	border-collapse: separate !important;
+}
+table.table-bordered thead th,
+table.table-bordered thead td {
+	border-left-width: 0;
+	border-top-width: 0;
+	
+}
+table.table-bordered tbody th,
+table.table-bordered tbody td {
+	border-left-width: 0;
+	border-bottom-width: 0;
+	vertical-align:middle;
+    padding: 3px 4px 3px 5px;
+	line-height: 15px;
+}
+table.table-bordered th:last-child,
+table.table-bordered td:last-child {
+	border-right-width: 0;
+}
+div.dataTables_scrollHead table.table-bordered {
+	border-bottom-width: 0;
+}
+
+
+
+
+/*
+ * TableTools styles
+ */
+.table tbody tr.active td,
+.table tbody tr.active th {
+	background-color: #08C;
+	color: white;
+}
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th {
+	background-color: #0075b0 !important;
+}
+
+.table tbody tr.active a {
+	color: white;
+}
+
+.table-striped tbody tr.active:nth-child(odd) td,
+.table-striped tbody tr.active:nth-child(odd) th {
+	background-color: #017ebc;
+}
+
+table.DTTT_selectable tbody tr {
+	cursor: pointer;
+}
+
+div.DTTT .btn {
+	color: #333 !important;
+	font-size: 12px;
+}
+
+div.DTTT .btn:hover {
+	text-decoration: none !important;
+}
+
+ul.DTTT_dropdown.dropdown-menu {
+  z-index: 2003;
+}
+
+ul.DTTT_dropdown.dropdown-menu a {
+	color: #333 !important; /* needed only when demo_page.css is included */
+}
+
+ul.DTTT_dropdown.dropdown-menu li {
+	position: relative;
+}
+
+ul.DTTT_dropdown.dropdown-menu li:hover a {
+	background-color: #0088cc;
+	color: white !important;
+}
+
+div.DTTT_collection_background {
+	z-index: 2002;	
+}
+
+/* TableTools information display */
+div.DTTT_print_info.modal {
+	height: 150px;
+	margin-top: -75px;
+	text-align: center;
+}
+
+div.DTTT_print_info h6 {
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 28px;
+	margin: 1em;
+}
+
+div.DTTT_print_info p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+div.dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 40px;
+    margin-left: -50%;
+    margin-top: -25px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(25%, rgba(255,255,255,0.9)), color-stop(75%, rgba(255,255,255,0.9)), color-stop(100%, rgba(255,255,255,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 25%, rgba(255,255,255,0.9) 75%, rgba(255,255,255,0) 100%);
+}
+
+
+
+/*
+ * FixedColumns styles
+ */
+div.DTFC_LeftHeadWrapper table,
+div.DTFC_LeftFootWrapper table,
+div.DTFC_RightHeadWrapper table,
+div.DTFC_RightFootWrapper table,
+table.DTFC_Cloned tr.even {
+    background-color: white;
+    margin-bottom: 0;
+}
+ 
+div.DTFC_RightHeadWrapper table ,
+div.DTFC_LeftHeadWrapper table {
+    margin-bottom: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+ 
+div.DTFC_RightHeadWrapper table thead tr:last-child th:first-child,
+div.DTFC_RightHeadWrapper table thead tr:last-child td:first-child,
+div.DTFC_LeftHeadWrapper table thead tr:last-child th:first-child,
+div.DTFC_LeftHeadWrapper table thead tr:last-child td:first-child {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+ 
+div.DTFC_RightBodyWrapper table,
+div.DTFC_LeftBodyWrapper table {
+    border-top: none;
+    margin: 0 !important;
+}
+ 
+div.DTFC_RightBodyWrapper tbody tr:first-child th,
+div.DTFC_RightBodyWrapper tbody tr:first-child td,
+div.DTFC_LeftBodyWrapper tbody tr:first-child th,
+div.DTFC_LeftBodyWrapper tbody tr:first-child td {
+    border-top: none;
+}
+ 
+div.DTFC_RightFootWrapper table,
+div.DTFC_LeftFootWrapper table {
+    border-top: none;
+}
+
+
+/*
+ * FixedHeader styles
+ */
+div.FixedHeader_Cloned table {
+	margin: 0 !important
+}
+table.dataTable tr td:first-child {
+    text-align: center;
+}
+.aln-cntr tr td:nth-child(4) {
+    text-align: center;
+}
+.aln-right tr td:nth-child(5) {
+    text-align: right;
+}
+.target-cntr tr td:nth-child(6) {
+    text-align: center;
+}
+.action-cntr tr td:nth-child(6) {
+    text-align: center;
+}
+.date-cntr tr td:nth-child(2){
+    text-align: center;
+}
+
+.doc-cntr tr td:nth-child(3){
+    text-align: center;
+}
+.val-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.rate-right tr td:nth-child(5){
+    text-align: right;
+}
+.totalqua-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.returnqua-cntr tr td:nth-child(5){
+    text-align: right;
+}
+.presentqua-cntr tr td:nth-child(6){
+    text-align: center;
+}
+.totalamt-right tr td:nth-child(7){
+    text-align: right;
+}
+
+
+.invamt-right tr td:nth-child(4){
+    text-align: right;
+}
+.paidamt-right tr td:nth-child(5){
+    text-align: right;
+}
+.disamt-right tr td:nth-child(6){
+    text-align: right;
+}
+.balnce-right tr td:nth-child(7){
+    text-align: right;
+}
+.duedate-cntr tr td:nth-child(9){
+    text-align: center;
+}
+.paiddate-cntr tr td:nth-child(10){
+    text-align: center;
+}
+.paystatus-cntr tr td:nth-child(11){
+    text-align: center;
+}
+
+.quanty-cntr tr td:nth-child(5){
+    text-align: center;
+}
+.delquant-cntr tr td:nth-child(6){
+    text-align: center;
+}
+.invstatus-cntr tr td:nth-child(9){
+    text-align: center;
+}
+.delstatus-cntr tr td:nth-child(8){
+    text-align: center;
+}
+.totamt-right tr td:nth-child(7){
+    text-align: right;
+}
+.totamt-right tr td:nth-child(6){
+    text-align: right;
+}
+.cashout-right td:nth-child(6){
+    text-align: right;
+}
+.cashin-right tr td:nth-child(7){
+    text-align: right;
+}
+.balance-right tr td:nth-child(8){
+    text-align: right;
+}
+.paymentstatus-cntr tr td:nth-child(9){
+    text-align: center;
+}
+.invoiceid-cntr tr td:nth-child(2){
+    text-align: center;
+}
+.totalqua-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.cgst-right tr td:nth-child(5){
+    text-align: right;
+}
+.sgst-right tr td:nth-child(6){
+    text-align: right;
+}
+.subtot-right tr td:nth-child(7){
+    text-align: right;
+}
+.invoiceamount-right tr td:nth-child(8){
+    text-align: right;
+}
+.paidamount-right tr td:nth-child(9){
+    text-align: right;
+}
+
+.invamount-right tr td:nth-child(3){
+    text-align: right;
+}
+.pamount-right tr td:nth-child(4){
+    text-align: right;
+}
+.damunt-right tr td:nth-child(5){
+    text-align: right;
+}
+.balancepay-right tr td:nth-child(6){
+    text-align: right;
+}
+
+.ob-right tr td:nth-child(4){
+    text-align: right;
+}
+.days1-right tr td:nth-child(5){
+    text-align: right;
+}
+.days2-right tr td:nth-child(6){
+    text-align: right;
+}
+.days3-right tr td:nth-child(7){
+    text-align: right;
+}
+.days4-right tr td:nth-child(8){
+    text-align: right;
+}
+.netbalance1-right tr td:nth-child(9){
+    text-align: right !important
+}
+.invoiceamount-right tr td:nth-child(5){
+    text-align: right;
+}
+.commissionamount-right tr td:nth-child(6){
+    text-align: right;
+}
+.originalamt-right tr td:nth-child(7){
+    text-align: right;
+}
+.profit-cntr tr td:nth-child(8){
+    text-align: center;
+}
+.profitamt-left tr td:nth-child(9){
+    text-align: right !important
+}				
+
+.costprice-right td:nth-child(6){
+    text-align: right;
+}	
+.quantity1-cntr tr td:nth-child(7){
+    text-align: center;
+}
+.tprice-right tr td:nth-child(8){
+    text-align: right;
+}
+.cgstam-right tr td:nth-child(9){
+    text-align: right;
+}
+.sgstamt-right tr td:nth-child(10){
+    text-align: right;
+}
+.totalpricewith-right tr td:nth-child(11){
+    text-align: right !important
+}
+.electricals-right tr td:nth-child(4){
+    text-align: right;
+}
+.paints-right tr td:nth-child(5){
+    text-align: right;
+}
+.tiles-right tr td:nth-child(6){
+    text-align: right;
+}
+.hardware-right tr td:nth-child(7){
+    text-align: right;
+}
+.txtne-right tr td:nth-child(8){
+	text-align:right !important
+}
+.customergstn-cntr tr td:nth-child(6){
+    text-align: center;
+}
+.totlqua-cntr tr td:nth-child(7){
+    text-align: center;
+}
+.cgst2-right tr td:nth-child(8){
+    text-align: right;
+}
+.sgst2-right tr td:nth-child(9){
+    text-align: right;
+}
+.subtotal1-right tr td:nth-child(10){
+    text-align: right;
+}
+.invamountgst-right tr td:nth-child(11){
+    text-align: right;
+}
+
+.totalquqntity-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.totalamount-right tr td:nth-child(5){
+    text-align: right;
+}
+.status-cntr tr td:nth-child(8){
+    text-align: center;
+}
+
+.tquantity-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.tamount-right tr td:nth-child(5){
+    text-align: right;
+}
+
+.purinvamount-right tr td:nth-child(4){
+    text-align: right;
+}
+.purpaidamt-right tr td:nth-child(5){
+    text-align: right;
+}
+.purdisamt-right tr td:nth-child(6){
+    text-align: right;
+}
+.purbalance-right tr td:nth-child(7){
+    text-align: right;
+}
+.purduedate-cntr tr td:nth-child(8){
+    text-align: center;
+}
+.purcreatedate-cntr tr td:nth-child(9){
+    text-align: center;
+}
+.pursatatus-cntr tr td:nth-child(10){
+    text-align: center;
+}
+
+.cusinvamt-right tr td:nth-child(4){
+    text-align: right;
+}
+.cusadvamt-right tr td:nth-child(5){
+    text-align: right;
+}
+.cuspaid0amt-right tr td:nth-child(6){
+    text-align: right;
+}
+.cusdisamt-right tr td:nth-child(7){
+    text-align: right;
+}
+.cusbalance-right tr td:nth-child(8){
+    text-align: right;
+}
+.cisinvdate-cntr tr td:nth-child(9){
+    text-align: center;
+}
+.cusduedate-cntr tr td:nth-child(10){
+    text-align: center;
+}
+.cusstatus-cntr tr td:nth-child(11){
+    text-align: center;
+}
+
+.saltquq-cntr tr td:nth-child(4){
+    text-align: center;
+}
+.salsubtotal-right tr td:nth-child(5){
+    text-align: right;
+}
+.salcostamt-right tr td:nth-child(6){
+    text-align: right;
+}
+.saldate1-right tr td:nth-child(7){
+    text-align: right ! important
+}
+
+
+
+
