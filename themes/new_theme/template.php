@@ -383,7 +383,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
   	<div class="header-left">
         <a href="<?php echo $this->config->item('base_url') . 'admin/dashboard' ?>" class="logo">
-            <img src="<?= $theme_path; ?>/images/logo.png" alt="" width="130" >
+            <img src="<?= $theme_path; ?>/images/vm-logo.jpg" alt="" width="100" >
         </a>
     </div>
   

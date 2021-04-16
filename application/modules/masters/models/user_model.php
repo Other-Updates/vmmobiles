@@ -1179,7 +1179,11 @@ class User_model extends CI_Model
 
             $frim_id[] = $value['firm_id'];
         }
+<<<<<<< HEAD
         if ($this->user_auth->get_user_role_id == '1')
+=======
+        if ($this->user_auth->get_user_role_id() != '1')
+>>>>>>> 3e52d5a74cbcd127097a3face7cf4fc0169251c2
             $this->db->where_in('erp_manage_firms.firm_id', $frim_id);
 
         $this->db->select('*');
