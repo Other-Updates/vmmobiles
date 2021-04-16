@@ -81,53 +81,12 @@ class Users extends MX_Controller
 
     public function index()
     {
-
-
-
-
-
-
-
-        $this->load->model('masters/user_model');
-
-
-
-
-
-
-
-
-
-
-
+       $this->load->model('masters/user_model');
         $data["agent"] = $agent = $this->user_model->get_user();
-
-
-
         $data['all_state'] = $this->user_model->state();
-
-
-
         $data['user'] = $user = $this->user_model->get_user_role();
-
-
-
         $data['firms'] = $firms = $this->user_model->get_active_firms();
-
-
-
-        //        echo "<pre>";
-
-        //        print_r($data["agent"]);
-
-        //        exit;
-
-
-
         $this->template->write_view('content', 'masters/user', $data);
-
-
-
         $this->template->render();
     }
 

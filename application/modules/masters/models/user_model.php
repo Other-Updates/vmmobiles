@@ -1169,24 +1169,20 @@ class User_model extends CI_Model
 
     public function get_active_firms()
     {
-
-
         $firms = $this->user_auth->get_user_firms();
-
         $frim_id = array();
 
         foreach ($firms as $value) {
-
             $frim_id[] = $value['firm_id'];
         }
-        if ($this->user_auth->get_user_role_id != '1')
-            // $this->db->where_in('erp_manage_firms.firm_id', $frim_id);
-
+        if ($this->user_auth->get_user_role_id() != '1')
+            $this->db->where_in('erp_manage_firms.firm_id', $frim_id);
         $this->db->select('*');
 
         $this->db->where('status', 1);
 
         $query = $this->db->get('erp_manage_firms')->result_array();
+        // echo $this->db->last_query();
 
         return $query;
     }

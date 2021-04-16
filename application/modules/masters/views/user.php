@@ -62,7 +62,7 @@
 
                                     <div class="form-group">
 
-                                        <label class="col-sm-4 control-label">Shop Name <span style="color:#F00; font-style:oblique;">*</span></label>
+                                        <label class="col-sm-4 control-label">Shop Nameasdasd <span style="color:#F00; font-style:oblique;">*</span></label>
 
                                         <div class="col-sm-8">
 
