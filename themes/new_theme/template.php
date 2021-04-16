@@ -649,7 +649,7 @@
         <footer class="main-footer">
             <div class="container">
                 <div class="copyright" id="bot_copyright">
-                    <div class="nvqc-show-hide-log  mt-foot">Copyright <?php echo date('Y'); ?> &COPY; VM-Mobiles. <span class="pull-right">Powered By <a href="http://f2fsolutions.co.in/" target="_blank">F2F Solutions</a></span></div>
+                    <div class="nvqc-show-hide-log  mt-foot">Copyright <?php echo date('Y'); ?> &COPY; VM-mobiles. <span class="pull-right">Powered By <a href="http://f2fsolutions.co.in/" target="_blank">F2F Solutions</a></span></div>
                 </div>
             </div>
 
