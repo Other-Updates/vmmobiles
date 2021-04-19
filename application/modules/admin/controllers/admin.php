@@ -47,6 +47,8 @@ class Admin extends MX_Controller {
                 $session_array = array('user_info' => $login_data);
 
                 $this->user_auth->store_in_session($session_array);
+                $this->ip_address($login_date[0]['id']);
+
 
                 redirect($this->config->item('base_url') . 'admin/dashboard');
 
@@ -55,7 +57,6 @@ class Admin extends MX_Controller {
                 redirect($this->config->item('base_url') . 'admin?login=fail');
 
         }
-
 
 
         $data['login_status'] = 'success';
@@ -462,5 +463,25 @@ class Admin extends MX_Controller {
 
 
 
+    public function ip_address() {
+    
+        // print_r($_SERVER['REMOTE_ADDR']);exit;
+        // $id = (int) $id;
+        // if ($id > 0) {
+            $this->db->select('count(ip) as count');
+            $this->db->where('ip',$_SERVER['REMOTE_ADDR']);
+            $q = $this->db->get('ipaddress')->result_array();
+            // print_r($q[0]['count']);exit;
+        // }
+        // if($q>0){
+        if ($q[0]['count'] == 0) { 
+            redirect($this->load->view('admin/restrict'));
+        }
+        // if ( !isset($_SERVER['REMOTE_ADDR']) || $_SERVER['REMOTE_ADDR'] != $q) { 
+            // redirect($this->load->view('admin/dashboard'));
+            // else
+            // redirect($this->load->view('admin/dashboard'));
+        // }
+    }
 }
 
