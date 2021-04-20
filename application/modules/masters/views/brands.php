@@ -56,7 +56,7 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane" id="brand">
                         <div class="frameset1">
-                            <form action="<?php echo $this->config->item('base_url'); ?>masters/brands/insert_brand"  name="form" method="post">
+                            <form action="<?php echo $this->config->item('base_url'); ?>masters/brands/insert_brand"  id="brandform1" name="form" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">

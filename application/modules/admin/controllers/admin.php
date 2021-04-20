@@ -471,7 +471,7 @@ class Admin extends MX_Controller {
             $this->db->select('count(ip) as count');
             $this->db->where('ip',$_SERVER['REMOTE_ADDR']);
             $q = $this->db->get('ipaddress')->result_array();
-            // print_r($q[0]['count']);exit;
+            // print_r($_SERVER['REMOTE_ADDR']);exit;
         // }
         // if($q>0){
         if ($q[0]['count'] == 0) { 

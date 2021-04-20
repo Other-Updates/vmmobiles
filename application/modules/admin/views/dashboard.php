@@ -223,6 +223,7 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
             //print_r($data['invoice']);
             // exit;
             ?>
+
             <div class="col-md-6">
                 <div class="panel panel-primary noborder">
                     <div class="panel-heading  panel-back  noborder">
@@ -269,6 +270,218 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                     </div>
                 </div>
             </div>
+            <div class="container">
+  <!-- Trigger the modal with a button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-bordered">
+                <h>Product Notification</h>
+                <thead>
+                    <tr>
+                        <th class="text-center">Product Name </th>
+                        <th class="text">Stock Quantity </th>
+                        <th class="texts">Request Stock </th>
+                        <th class="text-center">
+                                <button class="btn btn-md btn-primary" 
+                                    id="addBtn" type="button">
+                                +
+                                    </button>
+                            </th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        <!-- <input type="submit" class="btn btn-success" style="margin-left:500px"> -->
+        <button type="button" class="btn btn-default" style="margin-left:500px" onclick="view()">save</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<script>
+            $(document).ready(function () {
+        
+            // Denotes total number of rows
+            var rowIdx = 0;
+        
+            // jQuery button click event to add a row
+            $('#addBtn').on('click', function () {
+                 <?php 
+                    $option = '';
+                    for($i=0;$i<10;$i++){
+                        $option = $option.'<option >'.$i.'</option>';
+                    }
+                ?>
+                var option = '<?php echo $data; ?>';
+        
+                // Adding a row inside the tbody.
+                $('#tbody').append(`<tr id="R${++rowIdx}">
+                foreach ($firms as $value) {
+
+                    <td class="row-index text-center">
+                   
+
+                    
+
+
+                    <select>
+                    <option value="0">-select option-</option>
+                    <option value="1"><?php echo $value ?></option>
+                    <option value="2"><?php echo $value ?></option>
+                    <option value="3"><?php echo $value ?></option>
+                    </select>
+                    
+              
+
+                    </td>
+                    }
+
+                    <td class="row-index text">
+                <input type="text">
+                    </td>
+
+                    <td class="row-index texts">
+                <input type="text">
+                    </td>
+
+                    <td class="text-center">
+                        <button class="btn btn-danger remove"
+                        type="button">-</button>
+                        </td>
+                    </tr>`);
+            });
+            // jQuery button click event to remove a row.
+            $('#tbody').on('click', '.remove', function () {
+                $(this).closest('tr').remove();
+                });
+            });
+        </script>
+        <script>
+        
+        function view(){
+       
+       $.ajax({
+               url: '<?php echo base_url()?>user/create_user',
+               data: $('#myModal1').serialize(),
+               dataType: 'json',
+               success: function(data) {
+                   if (data ==1) {
+                       // listUsers();
+                       $( '#myModal1' ).each(function(){
+                           this.reset();
+                       });
+                   }
+                 
+                  
+               },
+               type: 'POST'
+           });
+            
+       }
+       </script>
+            
+        <!-- <div class="container pt-4">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th class="text-center">Product List </th>
+                <th class="text">Stock Quantity </th>
+                <th class="texts">Request Stock </th>
+                <th class="text-center"><button class="btn btn-md btn-primary" 
+            id="addBtn" type="button">
+        +
+        </button></th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+    
+            </tbody>
+        </table>
+        <input type="submit" class="btn btn-success">
+               
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+            </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+        
+            // Denotes total number of rows
+            var rowIdx = 0;
+        
+            // jQuery button click event to add a row
+            $('#addBtn').on('click', function () {
+        
+                // Adding a row inside the tbody.
+                $('#tbody').append(`<tr id="R${++rowIdx}">
+                    <td class="row-index text-center">
+                <input type="text">
+                    </td>
+                    <td class="row-index text">
+                <input type="text">
+                    </td>
+                    <td class="row-index texts">
+                <input type="text">
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger remove"
+                        type="button">-</button>
+                        </td>
+                    </tr>`);
+            });
+            // jQuery button click event to remove a row.
+            $('#tbody').on('click', '.remove', function () {
+        
+                // Getting all the rows next to the row
+                // containing the clicked button
+                // var child = $(this).closest('tr').nextAll();
+        
+                // // Iterating across all the rows 
+                // // obtained to change the index
+                // child.each(function () {
+        
+                // // Getting <tr> id.
+                // var id = $(this).attr('id');
+        
+                // // Getting the <p> inside the .row-index class.
+                // var idx = $(this).children('.row-index').children('p');
+        
+                // // Gets the row number from <tr> id.
+                // var dig = parseInt(id.substring(1));
+        
+                // // Modifying row index.
+                // idx.html(`Row ${dig - 1}`);
+        
+                // // Modifying row id.
+                // $(this).attr('id', `R${dig - 1}`);
+                // });
+        
+                // Removing the current row.
+                $(this).closest('tr').remove();
+                });
+            });
+        </script> -->
 
             <!--            <?php
             $data['today_po'] = $this->admin_model->get_cash_credit_po();

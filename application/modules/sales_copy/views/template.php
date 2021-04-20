@@ -151,7 +151,7 @@
                         <div class="mdiv">
                         </div>
                         <div class="pull-right">
-                            <div class="btn-group btn-group-option">
+                            /* <div class="btn-group btn-group-option"> */
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-caret-down"></i>
                                 </button>

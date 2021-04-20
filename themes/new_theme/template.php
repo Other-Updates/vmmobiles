@@ -183,6 +183,7 @@
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-caret-down"></i>
                                 </button>
+                                
                                 <ul class="dropdown-menu pull-right" role="menu">
 
                                     <li><a href="<?php echo $this->config->item('base_url') . 'admin/update_profile' ?>"><i class="glyphicon glyphicon-user"></i> My Profile</a>
@@ -216,93 +217,20 @@
                         <?php if ($this->user_auth->is_section_allowed('notification', 'general_notification') || $this->user_auth->is_section_allowed('purchase', 'purchase_request')) { ?>
                             <div class="receivable-notification">
                                 <div class="pull-right">
-
-                                    <?php //if (($user_info[0]['role'] == 1 || $user_info[0]['role'] == 2)) {   ?>
                                     <div class="btn-group btn-group-option">
-                                        <?php
-                                        $this->load->model('api/notification_model');
-                                        $notification = $this->notification_model->all_notification();
-                                        ?>
-                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                            <i class="fa fa-bell"></i>
-                                            <span class="label label-primary pull-xs-right label-pad noti-align noti-position <?php echo (count($notification) != 0) ? 'notify_count' : ''; ?>">
-                                                <?php
-                                                echo (($notification['total_count']) != 0) ? $notification['total_count'] : '';
-                                                ?></span>
-                                           <!-- <span class="noti-icon-badge"></span>-->
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-lg pb0 orange-notify" role="menu">
-                                            <div class="notification-head">
-                                                <h4>
-                                                    <small>
-                                                        Notification
-                                                    </small>
-                                                </h4>
-                                            </div>
-                                            <div class="user-scroll">
+                                
+                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="modal" data-target="#myModal1"> <i class="fa fa-bell"></i>
+                                       
+                                    <!-- <button type="button"class="btn btn-default dropdown-toggle" data-toggle="modal" data-target="#myModal"> <i class="fa fa-bell"></i> -->
+            <!-- <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"> -->
+                                            <!-- <i class="fa fa-bell"></i> -->
+                                            
+                                            
 
-                                                <?php
-                                                if (isset($notification) && !empty($notification)) {
-                                                    //print_r($notification);
-                                                    // exit;
-                                                    foreach ($notification as $noty) {
-                                                        ?>
-                                                        <div class="notification-user">
-                                                            <!--<a href="javascript:void(0);" class="dropdown-item notify-item">
-                                                                <div class="notify-icon bg-success"><i class="icon-bubble"></i></div>-->
-
-                                                            <p class="notify-details">
-                                                                <?php if ($noty['type'] != 'invoice') { ?>
-                                                                    <a href="<?php echo $this->config->item('base_url') . $noty['link'] . '?notification=' . $noty['id']; ?>">
-                                                                        <?php
-                                                                        if ($noty['type'] == 'payment')
-                                                                            echo 'Payment';
-                                                                        else if ($noty['type'] == 'purchase_payment')
-                                                                            echo 'Purchase Payment';
-                                                                        else if ($noty['type'] == 'min_qty')
-                                                                            echo 'Quantity Shortage';
-                                                                        else if ($noty['type'] == 'quotation')
-                                                                            echo 'Quotation';
-                                                                        else if ($noty['type'] == 'credit_days_exceeded')
-                                                                            echo 'Due Date Exceeded';
-                                                                        else if ($noty['type'] == 'credit_limit_exceeded')
-                                                                            echo 'Credit Limit Exceeded';
-
-                                                                        else if ($noty['type'] == 'purchase_request')
-                                                                            echo 'Purchase Request';
-                                                                        ?>
-                                                                    </a>
-                                                                    <br>
-                                                                    <small class="text-muted"><?php echo $noty['Message']; ?></small>
-                                                                <?php } ?>
-                                                                <?php if ($noty['type'] == 'invoice' && $user_info[0]['role'] == 1) { ?>
-                                                                    <a href="<?php echo $this->config->item('base_url') . $noty['link'] . '?notification=' . $noty['id']; ?>">
-                                                                        <?php
-                                                                        echo 'Invoice';
-                                                                        ?> </a><br>
-                                                                    <small class="text-muted"><?php echo $noty['Message']; 
-																	
-																	?></small>
-																
-                                                                <?php } ?>
-                                                            </p>
-                                                            </a>
-                                                        </div>
-
-                                                        <?php
-                                                    }
-                                                } else {
-													
-                                                    echo '<div class="notification-user no-data" >No data found...</div>';
-
-                                                }
-                                                ?>
-                                            </div>
                                         </div>
-                                    </div>
-                                    <?php // }    ?>
-                                </div>
-                            </div>
+
+                                            </div>
+                                                </div>
                         <?php } ?>
                         <!-- Stable notification -->
                         
@@ -359,6 +287,9 @@
                                 </div>
                             </div>
                         <?php } ?>
+
+
+
                         <?php if ($logged_in[0]['role'] == 1): ?>
                             <div class="pull-right">
                                 <!--                                <div class="btn-group btn-group-option but-new-inv">
