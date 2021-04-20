@@ -27,7 +27,7 @@ $data['company_details'] = $this->admin_model->get_company_details();
     <table width="100%">
         <tr>
             <td width="15%" style="vertical-align:middle;">
-                <div class="print_header_logo" ><img src="<?= $theme_path; ?>/images/logo-login2.png" /></div>
+                <div class="print_header_logo" ><img src="<?= $theme_path; ?>/images/vm-log.jpg" /></div>
             </td>
             <td width="85%">
                 <div class="print_header_tit" >

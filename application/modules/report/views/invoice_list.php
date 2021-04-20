@@ -51,7 +51,7 @@ $data['company_details'] = $this->admin_model->get_company_details();
 
                 <div class="print_header_tit" >
 
-                    <h3>Mobi-Point</h3>
+                    <h3>VM-Mobiles</h3>
 
                     <p>
 
