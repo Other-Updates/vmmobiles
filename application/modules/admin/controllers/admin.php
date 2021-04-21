@@ -47,6 +47,7 @@ class Admin extends MX_Controller {
                 $session_array = array('user_info' => $login_data);
 
                 $this->user_auth->store_in_session($session_array);
+                $this->ipaddress($login_data[0]['id']);
 
                 redirect($this->config->item('base_url') . 'admin/dashboard');
 
@@ -104,6 +105,21 @@ class Admin extends MX_Controller {
 
 //        }
 
+    }
+
+    public function ipaddress() {
+
+        $this->db->select('count(ip) as count');
+        $this->db->where('ip',$_SERVER['REMOTE_ADDR']);
+        $q = $this->db->get('ipaddress')->result_array();
+       
+        if ($q[0]['count'] == 0) {
+            redirect($this->config->item('base_url') . 'admin/restrict');
+        }
+    }
+
+    public function restrict(){
+        $this->load->view('admin/restrict');
     }
 
 
