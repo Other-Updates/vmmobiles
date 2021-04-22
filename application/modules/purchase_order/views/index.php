@@ -613,7 +613,7 @@ if (!empty($customers)) {
 
                     <div class="form-group">
 
-                        <label class="col-sm-4 control-label first_td1">Supplier&nbsp;Mobile&nbsp;No</label>
+                        <label class="col-sm-4 control-label first_td1">Supplier Mobile No</label>
 
                         <div class="col-sm-8">
 
