@@ -69,7 +69,7 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                     <div>Quotation</div>
                 </div>
             </a>
-        </div>
+        </div>-->
         <div class="col-md-4">
             <a href="<?php echo $this->config->item('base_url') . 'purchase_order/purchase_order_list' ?>">
                 <div class="dashboard-icons red-bg hvr-ripple-out">
@@ -77,7 +77,7 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                     <div>Purchase order</div>
                 </div>
             </a>
-        </div>-->
+        </div>
        <!-- <div class="col-md-2">
             <a href="<?php echo $this->config->item('base_url') . 'purchase_return/index' ?>">
                 <div class="dashboard-icons blue-bg hvr-ripple-out">
