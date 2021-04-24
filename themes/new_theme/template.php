@@ -469,7 +469,7 @@
                                 </li>
                             <?php endif; ?>
                             <?php if ($this->user_auth->is_module_allowed('quotation')): ?>
-                                <li class="masters_tab2 quotation_tab<?= ($cur_class == 'quotation') ? 'active' : '' ?>"><a href="<?php echo $this->config->item('base_url') . 'quotation/quotation_list' ?>"><i class="fa fa-quote-left" aria-hidden="true"></i><span>&emsp;Quotation</span></a>
+                                <li class="masters_tab2 quotation_tab<?= ($cur_class == 'quotation') ? 'active' : '' ?>"><a class="nav-link" href="<?php echo $this->config->item('base_url') . 'quotation/quotation_list' ?>"><i class="fa fa-quote-left" aria-hidden="true"></i><span>&emsp;Quotation</span></a>
                                 </li>
                             <?php endif; ?>
                             <?php if ($this->user_auth->is_module_allowed('purchase')): ?>

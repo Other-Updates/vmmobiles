@@ -206,7 +206,7 @@ if (!empty($customers)) {
         <form  method="post"  class="panel-body" id="quotation">
             <div class="row">
                 <div class="col-md-4">
-                    <?php if (count($firms) > 1) { ?>
+                    <?php if (count($firms) > 0) { ?>
                         <div class="form-group">
                             <label class="col-sm-4 control-label">Firm Name</label>
                             <div class="col-sm-8">
