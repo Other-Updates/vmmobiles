@@ -214,7 +214,7 @@ echo 1;
 
         $data['user_permissions'] = $user_permissions_arr;
 
-      //echo "<pre>";print_r($data['user_sections']);exit;
+        
 
         $this->template->write_view('content', 'masters/user_permissions', $data);
 

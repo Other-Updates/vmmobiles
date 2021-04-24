@@ -62,14 +62,14 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
   
     <?php if ($this->user_auth->is_section_allowed('dashboard', 'dashboard_list_view')): ?>
     <div class="row dash-icons">
-        <!-- <div class="col-md-1">
-            <a href="<?php //echo $this->config->item('base_url') . 'quotation/quotation_list' ?>">
+        <div class="col-md-1">
+            <a href="<?php echo $this->config->item('base_url') . 'quotation/quotation_list' ?>">
                 <div class="dashboard-icons orange-bg hvr-ripple-out">
                     <img src="<?= $theme_path; ?>/images/icons/1.png" />
                     <div>Quotation</div>
                 </div>
             </a>
-        </div> -->
+        </div>
         <div class="col-md-4">
             <a href="<?php echo $this->config->item('base_url') . 'purchase_order/purchase_order_list' ?>">
                 <div class="dashboard-icons red-bg hvr-ripple-out">

@@ -468,6 +468,10 @@
                                     </ul>
                                 </li>
                             <?php endif; ?>
+                            <?php if ($this->user_auth->is_module_allowed('quotation')): ?>
+                                <li class="masters_tab2 quotation_tab<?= ($cur_class == 'quotation') ? 'active' : '' ?>"><a href="<?php echo $this->config->item('base_url') . 'quotation/quotation_list' ?>"><i class="fa fa-quote-left" aria-hidden="true"></i><span>&emsp;Quotation</span></a>
+                                </li>
+                            <?php endif; ?>
                             <?php if ($this->user_auth->is_module_allowed('purchase')): ?>
                                 <li class="nav-item has-treeview masters_tab3 po_tab<?= ($cur_class == 'purchase_order' || $cur_class == 'purchase_return' || $cur_class == 'purchase_receipt' ) ? ' menu-open' : '' ?>"><a href="javascript: void(0)" class="nav-link"></i><i class="fa fa-fw fa-tasks" aria-hidden="true"></i> Purchase <i class="right fas fa-angle-left"></i></a>
                                     <ul class="nav nav-treeview">
@@ -872,7 +876,7 @@
         <script src="<?= $theme_path; ?>/js/select2.min.js"></script>
         <script type="text/javascript">
         var cur_class="<?php echo $cur_class;?>";
-        if(cur_class == 'report' || cur_class == 'purchase_order' || cur_class == 'sales'){
+        if(cur_class == 'report' || cur_class == 'purchase_order' || cur_class == 'sales' || cur_class=='quotation'){
             $('body').addClass('sidebar-collapse');
         }
             $('.dot_val').live('keypress', function (eve) {
